@@ -5,13 +5,9 @@ The Griffin group has access to the following computational resources:
 ## LRC, hosted by LBNL
 
 For an account on our local cluster, you will need to follow two steps:
-* Fill out a user agreement form 
+* Fill out a [user agreement form](https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/useragreement)
 
-<https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/useragreement>
-
-* Fill out the following account request form asking for access to the clusters below. You will need a PID to fill out the form -- double check with Sinéad which PID you should use. If you don’t have an employee ID, ask Sinéad what to do. 
-
-<https://docs.google.com/forms/d/e/1FAIpQLScTqDeiv8glP88YhAyePDE4ZDZcv_yhFQVUn4roVwZi984iyw/viewform>
+* Fill out the [account request form](https://docs.google.com/forms/d/e/1FAIpQLScTqDeiv8glP88YhAyePDE4ZDZcv_yhFQVUn4roVwZi984iyw/viewform) asking for access to the clusters below. You will need a PID to fill out the form -- double check with Sinéad which PID you should use. If you don’t have an employee ID, ask Sinéad what to do. 
 
 **CATAMOUNT** -  MSD cluster under PI Jeffrey Neaton
 
@@ -25,8 +21,7 @@ Sample job submission scripts and available codes are on the shared space on LRC
 
 ## NERSC, a national facility hosted by the DOE
 
-Apply for an account:
-<https://iris.nersc.gov/add-user>
+[Apply for an account](https://iris.nersc.gov/add-user)
 
 * The repo account most you will apply to for FY2022 is m3349, ‘quantumtheory’, under PI Sinéad Griffin. 
 
@@ -42,3 +37,6 @@ Once you have submitted this form, I (or the PI) will be notified of your reques
 
 **Perlmutter** - GPU
 
+:::{note}
+This text is **standard** _Markdown_
+:::
