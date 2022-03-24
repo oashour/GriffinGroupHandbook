@@ -16,3 +16,4 @@ Main group website: https://sineadgriffin.com
    seminars.md
    meetings.md
    newmemberchecklist.md
+   remotework.md

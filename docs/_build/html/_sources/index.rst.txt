@@ -7,7 +7,7 @@ Welcome to Griffin Group Handbook!
 ==================================
 We are currently working on porting this document from Google Docs to this website. Stay tuned!
 
-Main group website: <https://sineadgriffin.com>
+Main group website: https://sineadgriffin.com
 
 .. toctree::
    :maxdepth: 2
@@ -15,12 +15,5 @@ Main group website: <https://sineadgriffin.com>
 
    seminars.md
    meetings.md
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   newmemberchecklist.md
+   remotework.md
