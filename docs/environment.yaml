@@ -6,5 +6,5 @@ dependencies:
   - sphinx==4.4.0
   - nbsphinx==0.8.1
   - pip:
-    - sphinx_rtd_theme==1.0.0
     - myst-parser=0.17.0
+    - karma-sphinx-theme==0.0.8

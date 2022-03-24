@@ -31,12 +31,11 @@ Sample job submission scripts and available codes are on the shared space on LRC
 
 Once you have submitted this form, I (or the PI) will be notified of your request and approve it. NERSC will then email you a link to set up your password and you are ready to use the NERSC resources (typically within one working day).
 
-**Note:** NERSC resources are allocated from an application on an annual basis. As such the hours are limited. Please use NERSC as you wish, but keep an eye on your usage, and let me know if you think you will run out before the end of the year. You will also need to be added separately to the VASP license at NERSC. Ensure that you let Sinéad know that you plan on using VASP at NERSC as this is a parallel process to getting an account.
 
 **Cori** - CPU
 
 **Perlmutter** - GPU
 
 :::{note}
-This text is **standard** _Markdown_
+NERSC resources are allocated from an application on an annual basis. As such the hours are limited. Please use NERSC as you wish, but keep an eye on your usage, and let me know if you think you will run out before the end of the year. You will also need to be added separately to the VASP license at NERSC. Ensure that you let Sinéad know that you plan on using VASP at NERSC as this is a parallel process to getting an account.
 :::
