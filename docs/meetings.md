@@ -49,3 +49,6 @@ The coordinator is in italics.
 **Dark Matter and High-Energy Physics:** *Lakshay*, Nora, Omar
 
 **Microelectronics/AI-ML Working Group:** Raul + external
+
+## Collaboration Meetings
+Most group members will also attend regular collaboration meetings depending on which project you are working on. Generally speaking, postdocs are responsible for coordinating and arranging these meetings with our collaborators; Sinéad will inform you of who should be invited to these and what your roles and responsibilities are. Outside of these, I encourage you all to follow up with the students and postdocs in collaborations as needed.
