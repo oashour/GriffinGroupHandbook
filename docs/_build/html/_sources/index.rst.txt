@@ -15,6 +15,7 @@ Main group website: https://sineadgriffin.com
 
    groupculture.md
    newmemberchecklist.md
+   grouproles.md
    meetings.md
    sineadmeeting.md
    remotework.md
