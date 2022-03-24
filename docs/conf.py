@@ -28,7 +28,8 @@ author = 'Sinéad Griffin'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-        "myst_parser"
+        "myst_parser",
+        "karma_sphinx_theme"
 ]
 
 myst_enable_extensions = [
