@@ -17,3 +17,4 @@ Main group website: https://sineadgriffin.com
    meetings.md
    newmemberchecklist.md
    remotework.md
+   hpc.md
