@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Griffin Group Handbook!
-==================================
-We are currently working on porting this document from Google Docs to this website. Stay tuned!
+Welcome to the Griffin Group Handbook!
+======================================
+We are currently working on porting our user guide from Google Docs to this website. Stay tuned!
 
 Main group website: https://sineadgriffin.com
 
