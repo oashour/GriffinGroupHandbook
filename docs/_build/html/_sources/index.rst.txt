@@ -19,3 +19,4 @@ Main group website: https://sineadgriffin.com
    remotework.md
    hpc.md
    misc.md
+   groupculture.md
