@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Griffin Group Handbook  documentation</title>
+  <title>Job Scripts &mdash; Griffin Group Handbook  documentation</title>
   
 
   
@@ -28,7 +29,9 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Seminars" href="seminars.html" />
+    <link rel="prev" title="HP Computational Resources" href="hpc.html" /> 
 
 </head>
 
@@ -67,12 +70,14 @@
     
       <li><a href="index.html">Docs</a></li>
         
-      <li>Search</li>
+      <li>Job Scripts</li>
     
     
       <li class="breadcrumbs-aside">
         
             
+            <a href="_sources/jobscripts.md.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -86,7 +91,7 @@
                 <div class="col-12 col-lg-3 site-nav">
                     
 <div role="search">
-    <form class="search" action="#" method="get">
+    <form class="search" action="search.html" method="get">
         <div class="icon-input">
             <input type="text" name="q" placeholder="Search" />
             <span class="icon-search"></span>
@@ -101,7 +106,7 @@
                             
                             
                                 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="groupculture.html">Group Culture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="newmemberchecklist.html">New Member Checklist</a></li>
 <li class="toctree-l1"><a class="reference internal" href="grouproles.html">Group Roles</a></li>
@@ -130,10 +135,10 @@
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#nersc-a-national-facility-hosted-by-the-doe">NERSC, a national facility hosted by the DOE</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="jobscripts.html">Job Scripts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jobscripts.html#cori-haswell">Cori Haswell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jobscripts.html#cori-knights-landing">Cori Knight’s Landing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jobscripts.html#lrc">LRC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Job Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cori-haswell">Cori Haswell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cori-knights-landing">Cori Knight’s Landing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lrc">LRC</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="seminars.html">Seminars</a><ul>
@@ -164,19 +169,57 @@
                     <div class="document">
                         
                             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <section class="tex2jax_ignore mathjax_ignore" id="job-scripts">
+<h1>Job Scripts<a class="headerlink" href="#job-scripts" title="Permalink to this headline">¶</a></h1>
+<p>For NERSC clusters, you can use the <a class="reference external" href="https://my.nersc.gov/script_generator.php">NERSC job script generator</a>.</p>
+<section id="cori-haswell">
+<h2>Cori Haswell<a class="headerlink" href="#cori-haswell" title="Permalink to this headline">¶</a></h2>
+<p>For Cori-hsw, use VASP 5 (pure MPI)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -N 4</span>
+<span class="c1">#SBATCH -C haswell</span>
+<span class="c1">#SBATCH -q regular</span>
+<span class="c1">#SBATCH -t 00:30:00</span>
 
-  
-  <div id="search-results">
-  
-  </div>
+<span class="c1">#OpenMP settings:</span>
+<span class="n">export</span> <span class="n">OMP_NUM_THREADS</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMP_PLACES</span><span class="o">=</span><span class="n">threads</span>
+<span class="n">export</span> <span class="n">OMP_PROC_BIND</span><span class="o">=</span><span class="n">spread</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">vasp</span><span class="o">/</span><span class="mf">5.4.4</span><span class="o">-</span><span class="n">hsw</span>
+
+<span class="n">srun</span> <span class="o">-</span><span class="n">n</span> <span class="mi">128</span> <span class="o">-</span><span class="n">c</span> <span class="mi">2</span> <span class="o">--</span><span class="n">cpu_bind</span><span class="o">=</span><span class="n">cores</span> <span class="n">vasp_ncl</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag is always <code class="docutils literal notranslate"><span class="pre">2</span></code> for Haswell in pure MPI mode.</p>
+</section>
+<section id="cori-knights-landing">
+<h2>Cori Knight’s Landing<a class="headerlink" href="#cori-knights-landing" title="Permalink to this headline">¶</a></h2>
+<p>For Cori-knl, use VASP 6 (Hybrid OpenMP+MPI)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -N 4</span>
+<span class="c1">#SBATCH -C knl</span>
+<span class="c1">#SBATCH -q regular</span>
+<span class="c1">#SBATCH -t 00:30:00</span>
+
+<span class="c1">#OpenMP settings:</span>
+<span class="n">export</span> <span class="n">OMP_NUM_THREADS</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">export</span> <span class="n">OMP_PLACES</span><span class="o">=</span><span class="n">threads</span>
+<span class="n">export</span> <span class="n">OMP_PROC_BIND</span><span class="o">=</span><span class="n">spread</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">vasp</span><span class="o">/</span><span class="mf">6.3.0</span><span class="o">-</span><span class="n">knl</span>
+
+<span class="n">srun</span> <span class="o">-</span><span class="n">n</span> <span class="mi">64</span> <span class="o">-</span><span class="n">c</span> <span class="mi">16</span> <span class="o">--</span><span class="n">cpu_bind</span><span class="o">=</span><span class="n">cores</span> <span class="n">vasp_ncl</span>
+
+</pre></div>
+</div>
+<p>You want the product of the <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag and the <code class="docutils literal notranslate"><span class="pre">-n</span></code> flag to be <code class="docutils literal notranslate"><span class="pre">num_nodes</span> <span class="pre">*</span> <span class="pre">64</span> <span class="pre">cores/node</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">threads/core</span></code> on KNL. Note that KNL technically has 68 cores per node, but we usually stick to 64. As for the <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag, you want that to be <code class="docutils literal notranslate"><span class="pre">$OMP_NUM_THREADS</span> <span class="pre">*</span> <span class="pre">4</span></code>.</p>
+</section>
+<section id="lrc">
+<h2>LRC<a class="headerlink" href="#lrc" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
 
                         
                     </div>
@@ -203,22 +246,14 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2022, Sinéad Griffin.
         Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.
         </div>
-    </div>
-  
+    </div>  
 
 </body>
 </html>

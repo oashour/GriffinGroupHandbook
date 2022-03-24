@@ -20,5 +20,6 @@ Main group website: https://sineadgriffin.com
    sineadmeeting.md
    remotework.md
    hpc.md
+   jobscripts.md
    seminars.md
    misc.md
