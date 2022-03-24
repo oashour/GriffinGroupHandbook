@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Griffin Group Handbook
+
+theme:
+    name: readthedocs
+
