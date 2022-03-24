@@ -18,3 +18,4 @@ Main group website: https://sineadgriffin.com
    newmemberchecklist.md
    remotework.md
    hpc.md
+   misc.md
