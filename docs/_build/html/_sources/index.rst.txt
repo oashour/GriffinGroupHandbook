@@ -13,10 +13,11 @@ Main group website: https://sineadgriffin.com
    :maxdepth: 2
    :caption: Contents:
 
-   seminars.md
-   meetings.md
+   groupculture.md
    newmemberchecklist.md
+   meetings.md
+   sineadmeeting.md
    remotework.md
    hpc.md
+   seminars.md
    misc.md
-   groupculture.md
